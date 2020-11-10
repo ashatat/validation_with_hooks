@@ -1,0 +1,15 @@
+.error {
+    color: red;
+}
+
+.input.error {
+    border-color: red;
+}
+
+.label {
+    width: 100%;
+}
+
+.input {
+    width: 100%;
+}
