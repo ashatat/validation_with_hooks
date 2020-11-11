@@ -8,7 +8,7 @@ import "./App.css";
 const schema = yup.object().shape({
   firstName: yup.string().required(),
   lastName: yup.string().required(),
-  birthDate: yup.date().required(),
+  birthDate: yup.string().required(),
 });
 
 const initState = {
@@ -75,6 +75,7 @@ function App() {
           type="text"
           value={firstName}
           error={errors.firstName}
+          TexLabel="firstName"
         />
         <Input
           id="lastName"
@@ -82,6 +83,7 @@ function App() {
           type="text"
           value={lastName}
           error={errors.lastName}
+          TexLabel="lastName"
         />
         <Input
           id="birthDate"
@@ -89,8 +91,11 @@ function App() {
           type="date"
           value={birthDate}
           error={errors.birthDate}
+          TexLabel="birthDate"
         />
-        <button type="submit">Submit</button>
+        <button className="btn" type="submit">
+          Submit
+        </button>
       </form>
     </div>
   );

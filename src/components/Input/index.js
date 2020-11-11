@@ -3,9 +3,12 @@ import React from "react";
 import "./style.css";
 
 export default function Input(props) {
-  const { id, handleChange, type, value, error } = props;
+  const { id, handleChange, type, value, error, TexLabel } = props;
   return (
-    <label htmlFor={id} className="label">
+    <div className="inp-grp">
+      <label htmlFor={id} className="label">
+        {TexLabel}
+      </label>
       <input
         onChange={handleChange}
         id={id}
@@ -14,6 +17,6 @@ export default function Input(props) {
         value={value}
       />
       {error && <span className="error">{error}</span>}
-    </label>
+    </div>
   );
 }
